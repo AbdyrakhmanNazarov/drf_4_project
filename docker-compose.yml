@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  web:
+  web4:
     build: .
     container_name: drf4_web
     command: python manage.py runserver 0.0.0.0:8001
@@ -12,9 +12,9 @@ services:
     env_file:
       - .env
     depends_on:
-      - db
+      - db4
 
-  db:
+  db4:
     image: postgres:16
     container_name: postgres_drf4_db
     volumes:
