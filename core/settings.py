@@ -11,15 +11,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config(
-    'DJANGO_ALLOWED_HOSTS',
-    default='localhost,127.0.0.1'
-).split(',')
-
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost',
-    'http://127.0.0.1',
-]
+ALLOWED_HOSTS = ["*"]
 
 # =========================
 # Applications
